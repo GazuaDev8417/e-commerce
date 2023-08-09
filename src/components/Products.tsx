@@ -1,4 +1,5 @@
 import { FunctionComponent, useState, useEffect } from 'react'
+import axios from 'axios'
 import ProductCard from './ProductCard'
 import styled from 'styled-components'
 
@@ -57,9 +58,8 @@ const Products:FunctionComponent<ProductsProps> = (props)=>{
 
 
     const getProducts = ()=>{
-        fetch('https://e-commerce-server-rho.vercel.app/products').then(res => res.json())
-        .then(data=>{
-            setProducts(data)
+        axios.get('https://e-commerce-server-rho.vercel.app/products').then(res=>{
+            setProducts(res.data)
         }).catch(e=>{
             alert(e.message)
         })

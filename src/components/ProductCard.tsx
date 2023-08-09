@@ -1,5 +1,6 @@
 import { IProductsInCart } from '../pages/home/Home'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 import styled from 'styled-components'
 
 
@@ -39,31 +40,32 @@ const ProductButton = styled.button`
 const ProductCard = (props:any)=>{
   const navigate = useNavigate()
   const product = props.product  
+  const token = localStorage.getItem('token')
   
   
   const onAddProductToCart = (product:IProductsInCart):void=>{
-      const body = {
-        name: product.name,
-        price: Math.floor(Math.random() * 1000).toFixed(2)
+      if(!token){
+        const decide = window.confirm('Necessário efetuar login para fazer compras?')
+
+        if(decide){
+          navigate('/e-commerce/login')
+        }
+      }else{
+        const body = {
+          name: product.name,
+          price: Math.floor(Math.random() * 1000).toFixed(2),
+          clientId: token
+        }
+        
+        axios.post(`https://e-commerce-server-rho.vercel.app/cart/${product.id}`, body)
+          .then(()=> props.getProductsInCart()).catch(e=>{
+            alert(e.response.data)
+          })        
       }
-  
-      fetch(`https://e-commerce-server-rho.vercel.app/cart/${product.id}`, {
-        method:'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
-      }).then(()=> props.getProductsInCart())
-      .catch(e=>{
-        alert(e.message)
-        console.log(e.message)
-      })
     }
 
 
     const buy = ()=>{
-      const token = localStorage.getItem('token')
-
       if(!token){
         const decide = window.confirm('Necessário efetuar login para fazer compras?')
 

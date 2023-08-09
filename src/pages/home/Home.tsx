@@ -1,4 +1,5 @@
 import { useState } from "react"
+import axios from 'axios'
 import Header from "../../components/Header"
 import Filters from "../../components/Filters"
 import Products from "../../components/Products"
@@ -51,18 +52,20 @@ function Home() {
 
   
   const getProductsInCart = ()=>{
-    fetch('https://e-commerce-server-rho.vercel.app/cart/').then(res => res.json())
-      .then(data=>{
-        setProductsInCart(data)
+    const token = localStorage.getItem('token')
+    
+    axios.get(`https://e-commerce-server-rho.vercel.app/cart/${token}`)
+      .then(res=>{
+        setProductsInCart(res.data)
       }).catch(e=>{
-        alert(e.message)
+        alert(e.response.data)
       })
   }
 
 
   return (
     <>
-    <Header/>
+    <Header leftIcon={<div/>}/>
     <AppContainer>
       <Filters
         minFilter={minFilter}

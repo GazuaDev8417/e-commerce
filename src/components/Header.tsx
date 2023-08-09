@@ -6,7 +6,11 @@ import { Container } from './headerStyle'
 
 
 
-const Header:FunctionComponent = ()=>{
+interface LeftIcon{
+    leftIcon:any
+}
+
+const Header:FunctionComponent<LeftIcon> = ({ leftIcon })=>{
     const navigate = useNavigate()
     const inputFile = useRef<HTMLInputElement>(null)
     const menu = useRef<HTMLDivElement>(null)
@@ -47,7 +51,7 @@ const Header:FunctionComponent = ()=>{
 
         if(decide){
             localStorage.clear()
-            navigate('/e-commerce/login')
+            navigate('/e-commerce')
         }
     }
 
@@ -55,7 +59,7 @@ const Header:FunctionComponent = ()=>{
 
     return(
         <Container>
-            <div/>
+            {leftIcon}
             <h1>E-Commerce</h1>
             <input style={{display:'none'}}
                 ref={inputFile} 
@@ -79,8 +83,9 @@ const Header:FunctionComponent = ()=>{
                             <IoIosClose className='close' 
                                 onClick={showMenu}/>
                         </div>
-                        <li>Usuário</li>
-                        <li>Conta</li>
+                        <li onClick={()=> !token ? navigate('/e-commerce/login') : navigate('/e-commerce/account')}>
+                            Conta
+                        </li>
                         <li onClick={()=> !token ? navigate('/e-commerce/login') : logout()}>
                             {token ? 'Logout' : 'Login'}
                         </li>

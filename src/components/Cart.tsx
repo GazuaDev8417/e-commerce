@@ -1,5 +1,6 @@
 import { FunctionComponent, useEffect } from 'react'
-import { IProductsInCart } from '../App'
+import axios from 'axios'
+import { IProductsInCart } from '../pages/home/Home'
 import styled from 'styled-components'
 
 
@@ -44,23 +45,12 @@ const Cart:FunctionComponent<CartProps> = (props)=>{
     
         return totalValue
     }
-    
-    
-    /* const getProductsInCart = ()=>{
-        fetch('https://e-commerce-server-rho.vercel.app/cart/').then(res => res.json())
-            .then(data=>{
-            setProductsInCart(data)
-            }).catch(e=>{
-            alert(e.message)
-        })
-    } */
 
 
     const onRemoveProductFromCart = (product:IProductsInCart)=>{
-        fetch(`https://e-commerce-server-rho.vercel.app/cart/${product.id}`, {
-          method:'DELETE'
-        }).then(()=> props.getProductsInCart()).catch(e=>{
-          alert(e.message)
+      axios.delete(`https://e-commerce-server-rho.vercel.app/cart/${product.id}`)
+        .then(()=> props.getProductsInCart()).catch(e=>{
+          alert(e.response.data)
         })
     }
 
