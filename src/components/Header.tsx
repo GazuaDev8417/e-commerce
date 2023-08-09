@@ -1,73 +1,18 @@
 import { FunctionComponent, useState, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { BsPersonCircle } from 'react-icons/bs'
 import { IoIosClose } from 'react-icons/io'
-import styled from 'styled-components'
+import { Container } from './headerStyle'
 
-
-const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 20px;
-
-    .icon{
-        font-size: 30pt;
-        cursor: pointer;
-    }
-
-    .menu{
-        position: absolute;
-        top: 2vh;
-        right: -10vw;
-    }
-
-    ul{
-        list-style: none;
-        background-image: linear-gradient(lightgray, gray);
-        width: 10vw;
-        padding: 10px;
-        text-align: center;
-        border-radius: 5px;
-    }
-
-    ul .icon{
-        margin-bottom: 15px;
-    }
-
-    ul .close{
-        position: relative;
-        top: -4vh;
-        left: 2.5vw;
-        font-size: 15pt;
-        cursor: pointer;
-    }
-
-    li{
-        cursor: pointer;
-        margin: 5px;
-        text-align: left;
-    }
-
-    li:hover{
-        background-color: lightgray;
-        border-radius: 5px;
-        padding-left: 5px;
-    }
-
-    img{
-        width: 50px;
-        cursor: pointer;
-        border-radius: 50%;
-        border: 1px solid;
-    }
-`
 
 
 const Header:FunctionComponent = ()=>{
+    const navigate = useNavigate()
     const inputFile = useRef<HTMLInputElement>(null)
     const menu = useRef<HTMLDivElement>(null)
     const [mode, setMode] = useState<Boolean>(false)
     const [profileImage, setProfileImage] = useState<undefined | string>()
+    const token = localStorage.getItem('token')
 
 
 
@@ -96,6 +41,18 @@ const Header:FunctionComponent = ()=>{
         }
     }
 
+
+    const logout = ()=>{
+        const decide = window.confirm('Tem certeza que deseja se deslogar?')
+
+        if(decide){
+            localStorage.clear()
+            navigate('/e-commerce/login')
+        }
+    }
+
+    
+
     return(
         <Container>
             <div/>
@@ -107,18 +64,26 @@ const Header:FunctionComponent = ()=>{
                 onChange={handleProfileImage}/>
             <div>
                 {profileImage ? (
-                    <img src={profileImage} alt="Profile Image"/>
+                    <img src={profileImage} alt="Profile Image"
+                        onClick={showMenu}/>
                 ) : <BsPersonCircle className='icon'
                         onClick={showMenu}/>}
                 <div className="menu" ref={menu}>
                     <ul>
-                        {/* <div className="topMenu"> */}
-                            <BsPersonCircle className='icon'/>
-                            <IoIosClose className='close' onClick={showMenu}/>
-                        {/* </div> */}
+                        <div className="topMenu">
+                            {profileImage ? (
+                                <img src={profileImage} alt="Profile Image"
+                                    onClick={()=> token ? inputFile.current?.click() : null}/>
+                            ) : <BsPersonCircle className='icon'
+                                    onClick={()=> token ? inputFile.current?.click() : null}/>}
+                            <IoIosClose className='close' 
+                                onClick={showMenu}/>
+                        </div>
                         <li>Usuário</li>
                         <li>Conta</li>
-                        <li>Login</li>
+                        <li onClick={()=> !token ? navigate('/e-commerce/login') : logout()}>
+                            {token ? 'Logout' : 'Login'}
+                        </li>
                     </ul>
                 </div>
             </div>

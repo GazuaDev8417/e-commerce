@@ -98,7 +98,7 @@ const Products:FunctionComponent<ProductsProps> = (props)=>{
             <ProductsGrid>
                 {filteredAndOrderedList.map((product) => {
                     return(
-                        <ProductCard
+                        <ProductCard key={product.id}
                             product={product}
                             getProductsInCart={props.getProductsInCart}/>
                     )

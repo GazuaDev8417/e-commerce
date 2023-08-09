@@ -1,4 +1,5 @@
-import { IProductsInCart } from '../App'
+import { IProductsInCart } from '../pages/home/Home'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 
@@ -22,7 +23,7 @@ const CardInfo = styled.div`
     margin: 4px 0;
   }
 `
-const ButtonContainer = styled.button`
+const ButtonContainer = styled.div`
   border: none;
   display: flex;
   align-items: center;
@@ -36,6 +37,7 @@ const ProductButton = styled.button`
 
 
 const ProductCard = (props:any)=>{
+  const navigate = useNavigate()
   const product = props.product  
   
   
@@ -59,6 +61,19 @@ const ProductCard = (props:any)=>{
     }
 
 
+    const buy = ()=>{
+      const token = localStorage.getItem('token')
+
+      if(!token){
+        const decide = window.confirm('Necessário efetuar login para fazer compras?')
+
+        if(decide){
+          navigate('/e-commerce/login')
+        }
+      }
+    }
+
+
       
 
 
@@ -69,7 +84,8 @@ const ProductCard = (props:any)=>{
             <p>{product.name}</p>
             <p>R$ {Math.floor(Math.random() * 1000)},00</p>
             <ButtonContainer>
-              <ProductButton className='btn btn-dark'>
+              <ProductButton className='btn btn-dark'
+                onClick={buy}>
                 Comprar
               </ProductButton>
               <ProductButton className='btn btn-dark'
