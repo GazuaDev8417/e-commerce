@@ -97,10 +97,11 @@ const Products:FunctionComponent<ProductsProps> = (props)=>{
             </ProductsHeader>
             <ProductsGrid>
                 {filteredAndOrderedList.map((product) => {
-                    return <ProductCard
-                              product={product}
-                              getProductsInCart={props.getProductsInCart}
-                              />
+                    return(
+                        <ProductCard
+                            product={product}
+                            getProductsInCart={props.getProductsInCart}/>
+                    )
                 })} 
             </ProductsGrid>
         </ProductsContainer>

@@ -5,6 +5,7 @@ import styled from 'styled-components'
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
+
   @media(max-width: 700px){
     img {
       height: 200px;
@@ -21,8 +22,13 @@ const CardInfo = styled.div`
     margin: 4px 0;
   }
 `
-
-const AddToCartButton = styled.button`
+const ButtonContainer = styled.button`
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`
+const ProductButton = styled.button`
   align-self: center;
   margin-top: 4px;
 `
@@ -62,10 +68,15 @@ const ProductCard = (props:any)=>{
           <CardInfo>
             <p>{product.name}</p>
             <p>R$ {Math.floor(Math.random() * 1000)},00</p>
-            <AddToCartButton className='btn btn-dark'
-              onClick={() => onAddProductToCart(product)}>
-              Adicionar ao carrinho
-            </AddToCartButton>
+            <ButtonContainer>
+              <ProductButton className='btn btn-dark'>
+                Comprar
+              </ProductButton>
+              <ProductButton className='btn btn-dark'
+                onClick={() => onAddProductToCart(product)}>
+                Adicionar ao carrinho
+              </ProductButton>
+            </ButtonContainer>
           </CardInfo>
       </CardContainer>
     )

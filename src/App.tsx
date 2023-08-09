@@ -1,8 +1,9 @@
 import { useState } from "react"
-import styled from 'styled-components'
+import Header from "./components/Header"
 import Filters from "./components/Filters"
 import Products from "./components/Products"
 import Cart from "./components/Cart"
+import styled from 'styled-components'
 
 
 const AppContainer = styled.div`
@@ -60,6 +61,8 @@ function App() {
 
 
   return (
+    <>
+    <Header/>
     <AppContainer>
       <Filters
         minFilter={minFilter}
@@ -77,6 +80,7 @@ function App() {
         getProductsInCart={getProductsInCart}
         productsInCart={productsInCart}/>
     </AppContainer>
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://GazuaDev8417.github.io/e-commerce-typescript",
+  "homepage": "https://GazuaDev8417.github.io/e-commerce",
   "name": "e-commerce",
   "private": true,
   "version": "0.0.0",
@@ -16,6 +16,7 @@
     "bootstrap": "^5.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
     "styled-components": "^6.0.7"
   },
   "devDependencies": {
