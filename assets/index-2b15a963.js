@@ -96,7 +96,6 @@ Error generating stack: `+o.message+`
         right: -10vw;
 
         @media(max-width: 600px){
-            width: 30vw;
             top: -40vw;
         }
 
@@ -114,7 +113,7 @@ Error generating stack: `+o.message+`
         border-radius: 5px;
 
         @media(max-width: 600px){
-            width: 18vw;
+            width: 30vw;
         }
 
         @media(max-width: 300px){
