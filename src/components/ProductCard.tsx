@@ -53,7 +53,7 @@ const ProductCard = (props:any)=>{
       }else{
         const body = {
           name: product.name,
-          price: Math.floor(Math.random() * 1000).toFixed(2),
+          price: product.price,
           clientId: token
         }
         
@@ -84,7 +84,7 @@ const ProductCard = (props:any)=>{
           <img src={product.photo} alt="Imagem do produto"/>
           <CardInfo>
             <p>{product.name}</p>
-            <p>R$ {Math.floor(Math.random() * 1000)},00</p>
+            <p>R$ {product.price.toFixed(2)}</p>
             <ButtonContainer>
               <ProductButton className='btn btn-dark'
                 onClick={buy}>

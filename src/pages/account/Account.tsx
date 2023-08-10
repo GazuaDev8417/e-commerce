@@ -86,6 +86,15 @@ const Account = ()=>{
     }
 
 
+    const getTotal = ()=>{
+        if(cart.length > 0){
+            const result = cart.reduce((accumulator, value)=> accumulator + value.price, 0)
+
+            return result
+        }
+    }
+
+
 
     return(
         <>
@@ -115,6 +124,9 @@ const Account = ()=>{
                         </div>
                     )
                 })}
+            </div>
+            <div className="total">
+                Total R$ {getTotal()?.toFixed(2)}
             </div>
         </Container>   
         </> 

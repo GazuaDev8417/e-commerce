@@ -33,6 +33,11 @@ export const Container = styled.div`
         font-size: 30pt;
         cursor: pointer;
     }
+
+    .total{
+        text-align: center;
+        font-size: 20pt;
+    }
 `
 export const Line = styled.div`
     width: 100vw;
