@@ -27,10 +27,6 @@ export const Container = styled.div`
         grid-template-columns: repeat(4, 1fr);
 
         @media(max-width: 600px){
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media(max-width: 300px){
             display: flex;
             flex-direction: column;
         }
@@ -43,7 +39,7 @@ export const Container = styled.div`
         margin: 5px;
 
         @media(max-width: 600px){
-            width: 30vw;
+            width: 80vw;
         }
     }
 
@@ -60,8 +56,8 @@ export const Container = styled.div`
 
     button{
         @media(max-width: 600px){
-            width: 12vw;
-            font-size: 8pt;            
+            width: 30vw;
+            font-size: 10pt;            
         }
     }
 

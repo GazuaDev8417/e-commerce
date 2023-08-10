@@ -28,7 +28,7 @@ export const Container = styled.div`
         right: -10vw;
 
         @media(max-width: 600px){
-            top: -23vw;
+            top: -30vw;
         }
 
         @media(max-width: 300px){
