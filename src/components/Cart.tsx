@@ -1,7 +1,7 @@
 import { FunctionComponent, useEffect } from 'react'
 import axios from 'axios'
-import { IProductsInCart } from '../pages/home/Home'
 import styled from 'styled-components'
+import { CartProps } from '../interfaces/interfaces'
 
 
 
@@ -19,12 +19,6 @@ const ItemContainer = styled.div`
     margin: 0;
   }
 `
-
-
-interface CartProps{
-  getProductsInCart: ()=> void
-  productsInCart:IProductsInCart[]
-}
 
 
 

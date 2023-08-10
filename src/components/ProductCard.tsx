@@ -1,4 +1,4 @@
-import { IProductsInCart } from '../pages/home/Home'
+import { IProductsInCart, IProducts } from '../interfaces/interfaces' 
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
@@ -67,13 +67,25 @@ const ProductCard = (props:any)=>{
     }
 
 
-    const buy = ()=>{
+    const buy = (product:IProducts)=>{
       if(!token){
         const decide = window.confirm('Necessário efetuar login para fazer compras?')
 
         if(decide){
           navigate('/e-commerce/login')
         }
+      }else{
+        const body = {
+          value: product.price
+        }
+
+        axios.post('https://e-commerce-server-rho.vercel.app/product', body, {
+          headers: { Authorization: token }
+        }).then(res=>{
+          alert(res.data)
+        }).catch(e=>{
+          alert(e.response.data)
+        })
       }
     }
 
@@ -89,7 +101,7 @@ const ProductCard = (props:any)=>{
             <p>R$ {product.price.toFixed(2)}</p>
             <ButtonContainer>
               <ProductButton className='btn btn-dark'
-                onClick={buy}>
+                onClick={()=> buy(product)}>
                 Comprar
               </ProductButton>
               <ProductButton className='btn btn-dark'

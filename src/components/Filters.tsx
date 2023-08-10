@@ -1,13 +1,6 @@
 import { FunctionComponent } from 'react'
+import { FilterProps } from '../interfaces/interfaces'
 
-interface FilterProps{
-    minFilter:number
-    maxFilter:number
-    nameFilter:string
-    handleMinFilter:React.ChangeEventHandler<HTMLInputElement> | undefined
-    handleMaxFilter:React.ChangeEventHandler<HTMLInputElement> | undefined
-    handleNameFilter:React.ChangeEventHandler<HTMLInputElement> | undefined
-}
 
 const Filters:FunctionComponent<FilterProps> = (props)=>{    
 

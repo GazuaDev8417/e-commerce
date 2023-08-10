@@ -5,6 +5,8 @@ import Filters from "../../components/Filters"
 import Products from "../../components/Products"
 import Cart from "../../components/Cart"
 import styled from 'styled-components'
+import { IProductsInCart } from "../../interfaces/interfaces"
+
 
 
 const AppContainer = styled.div`
@@ -18,15 +20,6 @@ const AppContainer = styled.div`
     align-items: center;
   }
 `
-
-
-export interface IProductsInCart{
-  id:string
-  name:string
-  price:number
-  productId:string
-  quantity:number
-}
 
 
 

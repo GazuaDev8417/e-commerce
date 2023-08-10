@@ -2,6 +2,8 @@ import { FunctionComponent, useState, useEffect } from 'react'
 import axios from 'axios'
 import ProductCard from './ProductCard'
 import styled from 'styled-components'
+import { ProductsProps, IProducts } from '../interfaces/interfaces'
+
 
 
 const ProductsContainer = styled.div`
@@ -28,21 +30,6 @@ const ProductsGrid = styled.div`
     flex-direction: column;
   }
 `
-
-
-interface ProductsProps{
-    minFilter:number
-    maxFilter:number
-    nameFilter:string
-    getProductsInCart: ()=> void
-}
-
-interface IProducts{
-    id:string
-    name:string
-    photo:string
-    price:number
-}
 
 
 const Products:FunctionComponent<ProductsProps> = (props)=>{    
