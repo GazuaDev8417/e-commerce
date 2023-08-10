@@ -49,7 +49,7 @@ const Header:FunctionComponent<LeftIcon> = ({ leftIcon })=>{
                 setMode(false) 
 
                 if(mediaQuery.matches){
-                    menu.current.style.top = '-30vw'
+                    menu.current.style.top = '-40vw'
                     menu.current.style.transition = '1s'  
                     setMode(false)
                 }
