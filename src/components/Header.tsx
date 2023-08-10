@@ -21,17 +21,44 @@ const Header:FunctionComponent<LeftIcon> = ({ leftIcon })=>{
 
 
     const showMenu = ()=>{
+        const mediaQuery = window.matchMedia('(max-width: 600px)')
+        const mediaQuery300 = window.matchMedia('(max-width: 300px)')
+
         if(!mode){
             if(menu.current){
                 menu.current.style.right = '0.3vw'
                 menu.current.style.transition = '1s'  
-                setMode(true)          
+                setMode(true)
+                
+                if(mediaQuery.matches){
+                    menu.current.style.top = '0.5vw'
+                    menu.current.style.transition = '1s'  
+                    setMode(true)
+                }
+
+                if(mediaQuery300.matches){
+                    menu.current.style.right = '1.5vw'
+                    menu.current.style.transition = '1s'  
+                    setMode(true)
+                }
             }
         }else{
             if(menu.current){
                 menu.current.style.right = '-10vw'
                 menu.current.style.transition = '1s'
                 setMode(false) 
+
+                if(mediaQuery.matches){
+                    menu.current.style.top = '-23vw'
+                    menu.current.style.transition = '1s'  
+                    setMode(false)
+                }
+
+                if(mediaQuery300.matches){
+                    menu.current.style.right = '-31.5vw'
+                    menu.current.style.transition = '1s'  
+                    setMode(false)
+                }
             }
         }
     }

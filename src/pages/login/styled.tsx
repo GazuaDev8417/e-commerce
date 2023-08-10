@@ -11,6 +11,10 @@ export const Top = styled.header`
     .icon{
         cursor: pointer;
         font-size: 30pt;
+
+        @media(max-width: 600px){
+            font-size: 15pt;
+        }
     }
 `
 
@@ -32,6 +36,10 @@ export const Container = styled.div`
         width: 30vw;
         margin: 10px 0;
         border: 1px solid;
+
+        @media(max-width: 600px){
+            width: 70vw;
+        }
     }
 
     .btn-container{
@@ -42,6 +50,10 @@ export const Container = styled.div`
 
     input[type='reset'], button{
         width: 10vw;
+
+        @media(max-width: 600px){
+            width: 30vw;
+        }
     }
 `
 export const Bottom = styled.footer`

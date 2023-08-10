@@ -94,7 +94,7 @@ const ProductCard = (props:any)=>{
               </ProductButton>
               <ProductButton className='btn btn-dark'
                 onClick={() => onAddProductToCart(product)}>
-                Adicionar ao carrinho
+                Carrinho
               </ProductButton>
             </ButtonContainer>
           </CardInfo>

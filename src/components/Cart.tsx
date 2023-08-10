@@ -63,7 +63,7 @@ const Cart:FunctionComponent<CartProps> = (props)=>{
             <CartListContainer>
             {props.productsInCart.map((product) => {
                 return(
-                    <ItemContainer>
+                    <ItemContainer key={product.id}>
                         <p>{product.quantity}x {product.name}</p>
                         <button className='btn btn-dark'
                             onClick={() => onRemoveProductFromCart(product)}>

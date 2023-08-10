@@ -7,15 +7,33 @@ export const Container = styled.div`
     justify-content: space-between;
     margin: 10px 20px;
 
+    h1{
+        @media(max-width: 600px){
+            font-size: 15pt;
+        }
+    }
+
     .icon{
         font-size: 30pt;
         cursor: pointer;
+
+        @media(max-width: 600px){
+            font-size: 15pt;
+        }
     }
 
     .menu{
         position: absolute;
         top: 2vh;
         right: -10vw;
+
+        @media(max-width: 600px){
+            top: -23vw;
+        }
+
+        @media(max-width: 300px){
+            right: -30vw;
+        }
     }
 
     ul{
@@ -25,6 +43,14 @@ export const Container = styled.div`
         padding: 10px;
         text-align: center;
         border-radius: 5px;
+
+        @media(max-width: 600px){
+            width: 18vw;
+        }
+
+        @media(max-width: 300px){
+            width: 30vw;
+        }
     }
 
     ul .icon, img{
@@ -37,6 +63,14 @@ export const Container = styled.div`
         left: 8.5vw;
         font-size: 15pt;
         cursor: pointer;
+
+        @media(max-width: 600px){
+            left: 15vw;
+        }
+
+        @media(max-width: 300px){
+            left: 23.5vw;
+        }
     }
 
     li{

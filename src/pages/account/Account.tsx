@@ -119,7 +119,7 @@ const Account = ()=>{
             <div className="cart">
                 {cart && cart.map(item=>{
                     return(
-                        <div className="card">
+                        <div className="card" key={item.id}>
                             {item.name}<br/>
                             Valor: R${item.price.toFixed(2)}<br/>
                             Quantidade: {item.quantity}<br/><br/>
