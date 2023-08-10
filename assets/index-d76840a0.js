@@ -96,7 +96,7 @@ Error generating stack: `+o.message+`
         right: -10vw;
 
         @media(max-width: 600px){
-            top: -23vw;
+            top: -30vw;
         }
 
         @media(max-width: 300px){
@@ -360,10 +360,6 @@ Error generating stack: `+o.message+`
         grid-template-columns: repeat(4, 1fr);
 
         @media(max-width: 600px){
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media(max-width: 300px){
             display: flex;
             flex-direction: column;
         }
@@ -376,7 +372,7 @@ Error generating stack: `+o.message+`
         margin: 5px;
 
         @media(max-width: 600px){
-            width: 30vw;
+            width: 80vw;
         }
     }
 
@@ -393,8 +389,8 @@ Error generating stack: `+o.message+`
 
     button{
         @media(max-width: 600px){
-            width: 12vw;
-            font-size: 8pt;            
+            width: 30vw;
+            font-size: 10pt;            
         }
     }
 
