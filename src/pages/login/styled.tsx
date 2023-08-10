@@ -8,12 +8,18 @@ export const Top = styled.header`
     margin: 0;
     padding: 10px;
 
+    h1{
+        @media(max-width: 600px){
+            font-size: 15pt;
+        }
+    }
+
     .icon{
         cursor: pointer;
         font-size: 30pt;
 
         @media(max-width: 600px){
-            font-size: 15pt;
+            font-size: 12pt;
         }
     }
 `

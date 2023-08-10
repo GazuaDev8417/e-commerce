@@ -60,12 +60,12 @@ export const Container = styled.div`
     ul .close{
         position: absolute;
         top: -0.5vh;
-        left: 8.5vw;
-        font-size: 15pt;
+        left: 8vw;
+        font-size: 20pt;
         cursor: pointer;
 
         @media(max-width: 600px){
-            left: 15vw;
+            left: 23vw;
         }
 
         @media(max-width: 300px){

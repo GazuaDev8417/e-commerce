@@ -8,12 +8,18 @@ export const Top = styled.header`
     margin: 0;
     padding: 10px;
 
+    h1{
+        @media(max-width: 600px){
+            font-size: 15pt;
+        }
+    }
+
     .icon{
         cursor: pointer;
         font-size: 30pt;
 
         @media(max-width: 600px){
-            font-size: 15pt;
+            font-size: 13pt;
         }
     }
 `
@@ -25,11 +31,19 @@ export const Container = styled.div`
 
     form{
         margin-top: 10vh;
+
+        @media(max-width: 600px){
+            margin-top: 5vh;
+        }
     }
 
     legend{
         text-align: center;
         margin-bottom: 40px;
+
+        @media(max-width: 600px){
+            font-size: 12pt;
+        }
     }
 
     input{

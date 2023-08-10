@@ -116,6 +116,9 @@ const Account = ()=>{
                 <b>Creditos: </b>{client.credits}
             </div>
             <h4 style={{marginLeft:20}}>Seu carrinho:</h4>
+            <div className="total">
+                Total R$ {getTotal()?.toFixed(2)}
+            </div>
             <div className="cart">
                 {cart && cart.map(item=>{
                     return(
@@ -132,10 +135,7 @@ const Account = ()=>{
                         </div>
                     )
                 })}
-            </div>
-            <div className="total">
-                Total R$ {getTotal()?.toFixed(2)}
-            </div>
+            </div>            
         </Container>   
         </> 
     )
