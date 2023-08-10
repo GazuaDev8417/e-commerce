@@ -45,7 +45,9 @@ const Account = ()=>{
 
 
     const getClient = ()=>{
-        axios.get(`https://e-commerce-server-rho.vercel.app/client/${token}`).then(res=>{
+        axios.get(`https://e-commerce-server-rho.vercel.app/client`, {
+            headers: { Authorization: token }
+        }).then(res=>{
             setClient(res.data)
         }).catch(e=>{
             alert(e.response.data)
@@ -54,7 +56,9 @@ const Account = ()=>{
 
 
     const getProductsInCart = ()=>{
-        axios.get(`https://e-commerce-server-rho.vercel.app/cart/${token}`).then(res=>{
+        axios.get(`https://e-commerce-server-rho.vercel.app/cart/`, {
+            headers: { Authorization: token }
+        }).then(res=>{
             setCart(res.data)
         }).catch(e=>{
             alert(e.response.data)
@@ -63,7 +67,9 @@ const Account = ()=>{
 
 
     const removeItem = (item:IProductsInCart)=>{
-        axios.delete(`https://e-commerce-server-rho.vercel.app/cart/${item.id}`)
+        axios.delete(`https://e-commerce-server-rho.vercel.app/cart/${item.id}`, {
+            headers: { Authorization: token }
+        })
             .then(()=> getProductsInCart()).catch(e=>{
                 alert(e.response.data)
             })
@@ -75,7 +81,9 @@ const Account = ()=>{
             value: item.price
         }
 
-        axios.post(`https://e-commerce-server-rho.vercel.app/product/${token}`, body)
+        axios.post(`https://e-commerce-server-rho.vercel.app/product`, body, {
+            headers: { Authorization: token }
+        })
             .then(res=>{
                 alert(res.data)
                 removeItem(item)

@@ -57,7 +57,9 @@ const ProductCard = (props:any)=>{
           clientId: token
         }
         
-        axios.post(`https://e-commerce-server-rho.vercel.app/cart/${product.id}`, body)
+        axios.post(`https://e-commerce-server-rho.vercel.app/cart/${product.id}`, body, {
+          headers: { Authorization: token }
+        })
           .then(()=> props.getProductsInCart()).catch(e=>{
             alert(e.response.data)
           })        

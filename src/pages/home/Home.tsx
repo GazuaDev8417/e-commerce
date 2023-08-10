@@ -54,7 +54,9 @@ function Home() {
   const getProductsInCart = ()=>{
     const token = localStorage.getItem('token')
     
-    axios.get(`https://e-commerce-server-rho.vercel.app/cart/${token}`)
+    axios.get(`https://e-commerce-server-rho.vercel.app/cart/`, {
+      headers: { Authorization: token }
+    })
       .then(res=>{
         setProductsInCart(res.data)
       }).catch(e=>{

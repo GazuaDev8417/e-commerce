@@ -32,7 +32,9 @@ const Cart:FunctionComponent<CartProps> = (props)=>{
 
 
     useEffect(()=>{
-      props.getProductsInCart()
+      const token = localStorage.getItem('token')
+
+      token ? props.getProductsInCart() : null
     }, [])
 
 
