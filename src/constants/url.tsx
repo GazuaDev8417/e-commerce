@@ -1,0 +1,1 @@
+export const url = 'https://e-commerce-server-jade.vercel.app'

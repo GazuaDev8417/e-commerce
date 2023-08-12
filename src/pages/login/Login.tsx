@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom"
 import axios from 'axios'
 import { MdArrowBackIosNew } from 'react-icons/md'
 import { Top, Container, Bottom } from './styled.tsx'
+import { url } from "../../constants/url.tsx"
 
 
 interface User{
@@ -42,7 +43,7 @@ const Login = ()=>{
             password: form.password
         }
 
-        axios.post('https://e-commerce-server-rho.vercel.app/login', body).then(res=>{
+        axios.post(`${url}/login`, body).then(res=>{
             localStorage.setItem('token', res.data)
             limpar()
             navigate('/e-commerce')

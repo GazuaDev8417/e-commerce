@@ -1,5 +1,6 @@
 import { FunctionComponent, useState, useEffect } from 'react'
 import axios from 'axios'
+import { url } from '../constants/url'
 import ProductCard from './ProductCard'
 import styled from 'styled-components'
 import { ProductsProps, IProducts } from '../interfaces/interfaces'
@@ -45,7 +46,7 @@ const Products:FunctionComponent<ProductsProps> = (props)=>{
 
 
     const getProducts = ()=>{
-        axios.get('https://e-commerce-server-rho.vercel.app/products').then(res=>{
+        axios.get(`${url}/products`).then(res=>{
             setProducts(res.data)
         }).catch(e=>{
             alert(e.message)

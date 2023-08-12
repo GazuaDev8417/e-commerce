@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from 'axios'
+import { url } from "../../constants/url"
 import { MdArrowBackIosNew } from 'react-icons/md'
 import { Top, Container } from './styled'
 
@@ -51,7 +52,7 @@ const Signup = ()=>{
             confirmPass: form.confirmPass
         }
 
-        axios.post('https://e-commerce-server-rho.vercel.app/client', body).then(res=>{
+        axios.post(`${url}/signup`, body).then(res=>{
             localStorage.setItem('token', res.data)
             navigate('/e-commerce')
             limpar()

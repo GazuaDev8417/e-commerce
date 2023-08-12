@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from 'axios'
+import { url } from "../../constants/url"
 import Header from "../../components/Header"
 import { MdArrowBackIosNew } from 'react-icons/md'
-import { IProductsInCart } from "../home/Home"
+import { IProductsInCart } from "../../interfaces/interfaces"
 import { Container, Line } from './styled'
 
 
@@ -45,7 +46,7 @@ const Account = ()=>{
 
 
     const getClient = ()=>{
-        axios.get(`https://e-commerce-server-rho.vercel.app/client`, {
+        axios.get(`${url}/client`, {
             headers: { Authorization: token }
         }).then(res=>{
             setClient(res.data)
@@ -56,7 +57,7 @@ const Account = ()=>{
 
 
     const getProductsInCart = ()=>{
-        axios.get(`https://e-commerce-server-rho.vercel.app/cart/`, {
+        axios.get(`${url}/cart/`, {
             headers: { Authorization: token }
         }).then(res=>{
             setCart(res.data)
@@ -67,7 +68,7 @@ const Account = ()=>{
 
 
     const removeItem = (item:IProductsInCart)=>{
-        axios.delete(`https://e-commerce-server-rho.vercel.app/cart/${item.id}`, {
+        axios.delete(`${url}/cart/${item.id}`, {
             headers: { Authorization: token }
         })
             .then(()=> getProductsInCart()).catch(e=>{
@@ -81,7 +82,7 @@ const Account = ()=>{
             value: item.price
         }
 
-        axios.post(`https://e-commerce-server-rho.vercel.app/product`, body, {
+        axios.post(`${url}/product`, body, {
             headers: { Authorization: token }
         })
             .then(res=>{

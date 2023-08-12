@@ -1,7 +1,8 @@
 import { FunctionComponent, useEffect } from 'react'
 import axios from 'axios'
+import { url } from '../constants/url'
 import styled from 'styled-components'
-import { CartProps } from '../interfaces/interfaces'
+import { CartProps, IProductsInCart } from '../interfaces/interfaces'
 
 
 
@@ -44,7 +45,7 @@ const Cart:FunctionComponent<CartProps> = (props)=>{
 
 
     const onRemoveProductFromCart = (product:IProductsInCart)=>{
-      axios.delete(`https://e-commerce-server-rho.vercel.app/cart/${product.id}`)
+      axios.delete(`${url}/cart/${product.id}`)
         .then(()=> props.getProductsInCart()).catch(e=>{
           alert(e.response.data)
         })

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import axios from 'axios'
+import { url } from "../../constants/url"
 import Header from "../../components/Header"
 import Filters from "../../components/Filters"
 import Products from "../../components/Products"
@@ -47,7 +48,7 @@ function Home() {
   const getProductsInCart = ()=>{
     const token = localStorage.getItem('token')
     
-    axios.get(`https://e-commerce-server-rho.vercel.app/cart/`, {
+    axios.get(`${url}/cart`, {
       headers: { Authorization: token }
     })
       .then(res=>{
