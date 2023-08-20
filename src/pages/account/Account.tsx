@@ -97,7 +97,7 @@ const Account = ()=>{
 
     const getTotal = ()=>{
         if(cart.length > 0){
-            const result = cart.reduce((accumulator, value)=> accumulator + value.price, 0)
+            const result = cart.reduce((accumulator, value)=> accumulator + (value.price * value.quantity), 0)
 
             return result
         }
@@ -126,7 +126,8 @@ const Account = ()=>{
                         <div className="card" key={item.id}>
                             {item.name}<br/>
                             Valor: R${item.price.toFixed(2)}<br/>
-                            Quantidade: {item.quantity}<br/><br/>
+                            Quantidade: {item.quantity}<br/>
+                            Total: R${(item.price * item.quantity).toFixed(2)}<br/>
                             <div className="btn-container">
                                 <button className="btn btn-secondary"
                                     onClick={()=> buyProduct(item)}>Comprar</button>
