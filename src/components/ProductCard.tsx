@@ -1,6 +1,7 @@
 import { IProductsInCart, IProducts } from '../interfaces/interfaces' 
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { url } from '../constants/url'
 import styled from 'styled-components'
 
 
@@ -57,7 +58,7 @@ const ProductCard = (props:any)=>{
           clientId: token
         }
         
-        axios.post(`https://e-commerce-server-rho.vercel.app/cart/${product.id}`, body, {
+        axios.post(`${url}/cart/${product.id}`, body, {
           headers: { Authorization: token }
         })
           .then(()=> props.getProductsInCart()).catch(e=>{
@@ -79,7 +80,7 @@ const ProductCard = (props:any)=>{
           value: product.price
         }
 
-        axios.post('https://e-commerce-server-rho.vercel.app/product', body, {
+        axios.post(`${url}/product`, body, {
           headers: { Authorization: token }
         }).then(res=>{
           alert(res.data)
