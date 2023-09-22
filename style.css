@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    background: #fbf9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.nav-container{
+    width: 100%;
+    height: 110px;
+    background: linear-gradient(35deg, rgba(0,0,0,.1), rgba(0,0,0,.1));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    z-index: 1;
+    position: absolute;
+}
+
+.nav-container .logo{
+    width: 80px;
+}
+
+.nav-container .logo img{
+    border-radius: 50%;
+}
+
+.humburger{
+    display: none;
+}
+
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar ul li a{
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: .5s;
+    margin: 0 10px;
+}
+
+.nav-bar ul li a:hover{
+    background: #fff;
+    color: #000000;
+}
+
+/* CONTEÚDO */
+.content{
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    background: url('img/fashion-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content-box{
+    margin-left: 7%;
+}
+
+.content-box h2{
+    font-weight: 400;
+    font-size: 36px;
+    color: #ff4500;
+}
+
+.content-box label{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.content-box label span{
+    color: #fff;
+}
+
+.content-box a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    color: #000000;
+    letter-spacing: 3px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+    box-shadow: 4px 4px 10px #b7b6b6, -4px -4px 10px #fff;
+}
+
+.content-box a:hover{
+    box-shadow: -4px -4px 10px #b7b6b6, 4px 4px 10px #fff;
+}
+
+/* CATEGORIA */
+.category{
+    background: #fbf9f9;
+    margin: 80px 0;
+}
+
+.category-title{
+    margin-top: 20px;
+    margin-bottom: 90px;
+}
+
+.category-title h2{
+    text-align: center;
+}
+
+.category .category-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category .category-box .box{
+    margin: 30px 20px;
+}
+
+.category .category-box .box img{
+    width: 600px;
+    border-radius: 5px;
+    height: 328px;
+}
+
+.category .category-box .box-content{
+    position: absolute;
+    z-index: 1;
+    margin-left: 30px;
+    margin-top: 100px;
+}
+
+.category .category-box .box-content h3{
+    color: rgb(255, 103, 103);
+}
+
+.category .category-box .box-content label{
+    display: block;
+    font-size: 30px;
+    color: rgb(255, 103, 103);
+}
+
+.category .category-box .box-content a{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 25px;
+    font-size: 14px;
+    border-radius: 25px;
+    background: #fff;
+    transition: all .19s ease-in;
+    color: #000000;
+}
+
+.category .category-box .box-content a:hover{
+    background: rgb(255, 237, 237);
+}
+
+.category .category-box .box-content.b2{
+    margin-left: 370px;
+    text-align: right;
+    margin-top: 100px;
+}
+
+.category .category-box .box-content.b2 h3{
+    color: rgb(91, 253, 202);
+}
+
+.category .category-box .box-content.b2 label{
+    color: rgb(91, 253, 202);
+}
+
+/* MAIS VOTADOS */
+
+.most-rated{
+    padding: 50px;
+    background: #fbf9f9;
+    margin: 50px 0;
+}
+
+.most-rated .most-rated-title{
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.most-rated-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.most-rated-items .most-rated-item{
+    padding: 20px;
+    margin: 80px 30px;
+    height: 300px;
+}
+
+.most-rated-items .most-rated-item .most-rated-image img{
+    height: 250px;
+}
+
+.most-rated-items .most-rated-item .most-rated-body{
+    margin-top: 150px;
+}
+
+.most-rated-items .most-rated-item .most-rated-body h4{
+    color: #808080;
+    font-weight: 400;
+}
+
+.most-rated-items .most-rated-item .most-rated-body .icons i{
+    font-size: 12px;
+    color: #ffa500;
+}
+
+.most-rated-items .most-rated-item .most-rated-body .price label{
+    font-size: 15px;
+}
+
+.most-rated-items .most-rated-item .most-rated-body .price label.sale{
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: line-through;
+    color: #808080;
+}

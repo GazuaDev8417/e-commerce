@@ -1,13 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Commerce</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gazua Clothes</title>
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://t3.ftcdn.net/jpg/02/54/60/36/360_F_254603632_pDnN51xWdl3CMRjeyFDH3RvkJcDnBn1r.jpg" alt="Logo">
+                </a>
+            </div>
+            <div class="humburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#" class="active">Gazua</a></li>
+                    <li><a href="#" class="#category">Categoria</a></li>
+                    <li><a href="#" class="#products">Produtos</a></li>
+                    <li><a href="#" class="#news">Novidades</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <div class="content-box">
+            <h2>Ganhe até 45% <br> em novos produtos</h2>
+            <label>O seu salão de vendas online é aqui <span>Gazua Clothes</span></label><br>
+            <a href="#">Compre agora <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <section class="category" id="category">
+        <div class="category-title">
+            <h2>Categoria Gazua Clothes</h2>
+        </div>
+        <div class="category-box">
+            <div class="box woman-box">
+                <div class="box-content b2">
+                    <h3>Últimas tendências</h3>
+                    <label>Mulher</label>
+                    <a href="#">Aqui</a>
+                </div>
+                <img src="img/woman.jpg">
+            </div>
+            <div class="box man-box">
+                <div class="box-content">
+                    <h3>Estilos mais populares</h3>
+                    <label>Homem</label>
+                    <a href="#">Aqui</a>
+                </div>
+                <img src="img/man.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="most-rated">
+        <div class="most-rated-box">
+            <div class="most-rated-title">
+                <h2>MAIS VOTADOS</h2>
+            </div>
+            <div class="most-rated-items">
+                <div class="most-rated-item">
+                    <div class="most-rated-image">
+                        <img src="img/camiseta-camisa.jpg">
+                    </div>
+                    <div class="most-rated-body">
+                        <h4>Camiseta Feminina</h4>
+                        <div class="icons">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">
+                            <label class="sale">R$ 69.00</label>
+                            <label>R$ 29.99</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="most-rated-item">
+                    <div class="most-rated-image">
+                        <img src="img/tenis_unissex.jpg">
+                    </div>
+                    <div class="most-rated-body">
+                        <h4>Tênis Unissex</h4>
+                        <div class="icons">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">
+                            <label class="sale">R$ 189.00</label>
+                            <label>R$ 149.99</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="most-rated-item">
+                    <div class="most-rated-image">
+                        <img src="img/camisa_masculina.jpg">
+                    </div>
+                    <div class="most-rated-body">
+                        <h4>Camisa Masculina</h4>
+                        <div class="icons">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">
+                            <label class="sale">R$ 89.00</label>
+                            <label>R$ 49.99</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-products">
+        <div class="popular-products-box">
+            <div class="popular-products-title">
+                <h2>PRODUTOS POPULARES</h2>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
 </html>
