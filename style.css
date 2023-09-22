@@ -18,6 +18,12 @@ img{
     height: 100%;
 }
 
+a:active,
+.nav-container a img:active, 
+button:active{
+    transform: scale(.9);
+}
+
 .nav-container{
     width: 100%;
     height: 110px;
@@ -36,6 +42,7 @@ img{
 
 .nav-container .logo img{
     border-radius: 50%;
+    transition: .3s;
 }
 
 .humburger{
@@ -431,7 +438,10 @@ img{
 .footer-box .footer-i label{
     display: inline-block;
     margin-bottom: 5px;
-    font-size: 13px;
+    font-size: 13px;    
+}
+
+.footer-box label a{
     color: rgb(137, 130, 130);
 }
 
@@ -452,6 +462,7 @@ img{
     width: 400px;
     display: block;
     line-height: 22px;
+    color: rgb(137, 130, 130);
 }
 
 .footer-box .footer-i.f4 input{
@@ -471,6 +482,7 @@ img{
     outline: none;
     border: none;
     cursor: pointer;
+    transition: .5s;
 }
 
 .footer-box .footer-i.f4 .social-media{
@@ -489,6 +501,10 @@ img{
 .footer-box .footer-i.f4 .social-media a i:hover{
     background: #fff;
     color: #000000;
+}
+
+.footer-box .footer-i.f4 .social-media a i:active{
+    transform: scale(.9);
 }
 
 /* RESPONSIVIDADE */
