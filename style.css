@@ -491,7 +491,7 @@ img{
     color: #000000;
 }
 
-/* RESPONSIVITY */
+/* RESPONSIVIDADE */
 
 @media(max-width: 755px){
     .nav-bar ul li a{
@@ -532,7 +532,7 @@ img{
         font-size: 12px;
         border-radius: 5px;
         transition: all .2s ease-in-out;
-    }
+    }    
 }
 
 @media(max-width: 1200px){
@@ -545,6 +545,12 @@ img{
         margin-left: 300px;
         text-align: right;
         margin-top: 100px;
+    }
+}
+
+@media(max-width: 1100px){
+    .most-rated-items .most-rated-item .most-rated-body{
+        margin-top: 25px;
     }
 }
 
@@ -592,6 +598,16 @@ img{
     .nav-bar ul li a{
         margin-bottom: 12px;
     }
+
+    /* DESCONTOS */
+    .discount-news-box .discount-news-content{
+        font-size: 25px;
+    }
+
+    .discount-news-box .discount-news-content .time{
+        font-size: 20px;
+    }
+
 }
 
 @media(max-width: 660px){
@@ -671,6 +687,10 @@ img{
         margin: 90px 30px;
         height: 300px;
     }
+
+    .popular-products-items .popular-products-item .popular-products-image img{
+        height: 200px;
+    }
 }
 
 @media(max-width: 420px){
@@ -725,6 +745,10 @@ img{
         height: 230px;
     }
 
+    .most-rated-items .most-rated-item .most-rated-body{
+        margin-top: 10px;
+    }
+
     /* PRODUTOS POPULARES */
     .popular-products-title h2{
         font-weight: 400;
@@ -736,6 +760,27 @@ img{
 
     .popular-products .popular-products-title h2{
         font-size: 21px;
+    }
+
+    /* DESCONTOS */
+    .discount-news-box{
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .discount-news-box .discount-news-content{
+        font-size: 20px;
+    }
+
+    .discount-news-box .discount-news-content .time{
+        font-size: 18px;
+    }
+
+    .discount-news-box .discount-news-image img{
+        width: 250px;
+        margin-right: 5px;
     }
 }
 
