@@ -76,7 +76,7 @@ button:active{
     justify-content: center;
     height: 100vh;
     flex-direction: column;
-    background: url('img/fashion-background.jpg');
+    background: url('img/icon1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -127,8 +127,7 @@ button:active{
 }
 
 .category-title{
-    margin-top: 20px;
-    margin-bottom: 90px;
+    margin: 20px 0;
 }
 
 .category-title h2{
@@ -139,7 +138,6 @@ button:active{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .category .category-box .box{
@@ -149,14 +147,13 @@ button:active{
 .category .category-box .box img{
     width: 600px;
     border-radius: 5px;
-    height: 328px;
 }
 
 .category .category-box .box-content{
     position: absolute;
+    left: 20%;
+    bottom: -50%;
     z-index: 1;
-    margin-left: 30px;
-    margin-top: 100px;
 }
 
 .category .category-box .box-content h3{
@@ -201,13 +198,12 @@ button:active{
 /* MAIS VOTADOS */
 
 .most-rated{
-    padding: 50px;
-    background: #fbf9f9;
-    margin: 50px 0;
+   background: #fbf9f9;
+   margin-bottom: 50px;
 }
 
 .most-rated .most-rated-title{
-    margin-bottom: 80px;
+    margin: 20px 0;
     text-align: center;
 }
 
@@ -226,6 +222,7 @@ button:active{
 
 .most-rated-items .most-rated-item .most-rated-image img{
     height: 250px;
+    border-radius: 10px;
 }
 
 .most-rated-items .most-rated-item .most-rated-body{
@@ -256,7 +253,7 @@ button:active{
 /* PRODUTOS POPULARES */
 
 .popular-products{
-    padding: 50px;
+    padding-top: 80px;    
     margin-bottom: 120px;
     background: #fbf9f9;
 }
