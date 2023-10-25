@@ -147,6 +147,7 @@ button:active{
 .category .category-box .box img{
     width: 600px;
     border-radius: 5px;
+    box-shadow: 0 0 10px;
 }
 
 .category .category-box .box-content{
@@ -179,6 +180,7 @@ button:active{
 
 .category .category-box .box-content a:hover{
     background: rgb(255, 237, 237);
+    box-shadow: 0 0 10px #fff;
 }
 
 .category .category-box .box-content.b2{
@@ -223,6 +225,7 @@ button:active{
 .most-rated-items .most-rated-item .most-rated-image img{
     height: 250px;
     border-radius: 10px;
+    box-shadow: 0 0 10px;
 }
 
 .most-rated-items .most-rated-item .most-rated-body{
@@ -281,6 +284,8 @@ button:active{
 
 .popular-products-items .popular-products-item .popular-products-image img{
     height: 250px;
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
 }
 
 .popular-products-items .popular-products-item .popular-products-body{
@@ -319,48 +324,6 @@ button:active{
     background: #f8dcdc;
 }
 
-/* DESCONTOS */
-
-.discount-news-box{
-    display: flex;
-    width: 100%;
-    padding: 30px;
-    background: #f7e7e7;
-    margin: 20px 0;
-    justify-content: space-between;
-}
-
-.discount-news-box .discount-news-content{
-    font-weight: 300;
-    letter-spacing: 1px;
-    line-height: 59px;
-    font-size: 32px;
-}
-
-.discount-news-box .discount-news-content p{
-    margin: 30px 0 0 50px;
-}
-
-.discount-news-box .discount-news-content .time{
-    margin: 60px 0 0 46px;
-    font-size: 30px;
-}
-
-.discount-news-box .discount-news-content .time label{
-    margin: 0 12px;
-}
-
-.discount-news-box .discount-news-content .time label span{
-    margin-left: 15px;
-}
-
-.discount-news-box .discount-news-image img{
-    width: 320px;
-    margin-right: 100px;
-    margin-top: 15px;
-}
-
-
 /* NOSSOS SERVIÇOS */
 
 .our-services{
@@ -373,6 +336,10 @@ button:active{
     justify-content: space-around;
     padding: 50px;
     flex-wrap: wrap;
+}
+
+.our-services-title{
+    text-align: center;
 }
 
 .our-services-box .our-services-item{
@@ -482,11 +449,7 @@ button:active{
     transition: .5s;
 }
 
-.footer-box .footer-i.f4 .social-media{
-    margin-top: 30px;
-}
-
-.footer-box .footer-i.f4 .social-media a i{
+.social-media a i{
     color: #fff;
     margin-right: 10px;
     font-size: 19px;
@@ -495,13 +458,33 @@ button:active{
     padding: 13px;
 }
 
-.footer-box .footer-i.f4 .social-media a i:hover{
+.social-media a i:hover{
     background: #fff;
     color: #000000;
 }
 
-.footer-box .footer-i.f4 .social-media a i:active{
+.social-media a i:active{
     transform: scale(.9);
+}
+
+.social-media-share{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-media-share a,
+.social-media-share a i{
+    color: #fff;
+    transition: .5s;
+}
+
+.social-media-share a:hover i{
+    padding-right: 10px;
+}
+
+.social-media-share a:hover a:nth-child(2){
+    padding-left: 10px;
 }
 
 /* RESPONSIVIDADE */
