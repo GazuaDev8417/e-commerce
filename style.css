@@ -532,11 +532,6 @@ button:active{
 }
 
 @media(max-width: 1200px){
-    .category .category-box .box img{
-        width: 530px;
-        height: 328px;
-    }
-
     .category .category-box .box-content.b2{
         margin-left: 300px;
         text-align: right;
@@ -544,9 +539,23 @@ button:active{
     }
 }
 
-@media(max-width: 1100px){
+@media(max-width: 1220px){
     .most-rated-items .most-rated-item .most-rated-body{
         margin-top: 25px;
+    }
+}
+
+@media(max-width: 970px){
+    .category .category-box .box-content h3,
+    .category .category-box .box-content label{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 790px){
+    .category .category-box .box-content h3,
+    .category .category-box .box-content label{
+        font-size: 1.3rem;
     }
 }
 
@@ -614,29 +623,18 @@ button:active{
 
     .category .category-box .box img{
         width: 400px;
-        height: 260px;
+        height: 600px;
         margin: 0 20px;
     }
 
-    .category .category-box .box-content label{
-        font-size: 25px;
-        margin-left: 10px;
-    }
-
-    .category .category-box .box-content h3{
-        margin-left: 10px;
-        font-size: 16px;
-    }
-
-    .category .category-box .box-content a{
-        padding: 10px 16px;
-        font-size: 14px;
-        margin-top: 10px;
-        margin-left: 5px;
-    }
-
     .category .category-box .box-content.b2{
-        margin-right: 370px;
+        text-align: left;
+        margin-left: 0;
+    }
+    
+    .category .category-box .box-content a{
+        transform: scale(.8);
+        margin-left: -10px;
     }
 }
 
@@ -644,37 +642,6 @@ button:active{
     .category-title h2{
         font-size: 18px;
         font-weight: 400;
-    }
-
-    .category .category-box .box img{
-        width: 340px;
-        height: 190px;
-        margin: 0 20px;
-    }
-
-    .category .category-box .box-content.b2{
-        margin-left: 30px;
-        text-align: left;
-        margin-top: 35px;
-    }
-
-    .category .category-box .box-content{
-        margin-top: 45px;
-    }
-
-    .category .category-box .box-content label{
-        font-size: 19px;
-    }
-
-    .category .category-box .box-content h3{
-        font-size: 14px;
-    }
-
-    .category .category-box .box-content a{
-        padding: 8px 12px;
-        font-size: 12px;
-        margin-top: 10px;
-        margin-left: 5px;
     }
 
     /* PRODUTOS POPULARES */
