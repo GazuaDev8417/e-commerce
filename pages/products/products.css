@@ -86,6 +86,20 @@
     text-align: center;
 }
 
+.video-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px 15px;
+}
+
+.abelha-insta-video1{
+    width: 300px;
+    height: 250px;
+    border-radius: 20px;
+}
+
 .images-container{
     display: flex;
     align-items: center;
@@ -101,6 +115,7 @@
     background: rgb(81, 79, 79);
     padding: 50px 20px;
     border-radius: 10px;
+    margin-bottom: -3rem;
 }
 
 .image-gallery{
@@ -198,6 +213,11 @@
     .products-container{
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .video-container{
+        flex-direction: column;
+        margin: 5rem 3rem;
+    }
 }
 
 @media(max-width: 750px){
@@ -213,13 +233,13 @@
     }
 }
 
-@media(max-width: 500px){
-    .products-content{
-        background-image: url('https://scontent.fssa20-1.fna.fbcdn.net/v/t1.6435-9/186484483_138910438294942_3946128697690726956_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=810d5f&_nc_ohc=dxwZZ3Ec9rAAX_Du90Q&_nc_ht=scontent.fssa20-1.fna&oh=00_AfBYF-S48DB1GeGJj7RY-yn7-kwunR-63442DR4pcnIMgQ&oe=65635A00');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+@media(max-width: 450px){
+    h2{
+        font-weight: 400;
+    }
+
+    .video-container{
+        margin: 5rem 3rem;
     }
 
     .products-container{
