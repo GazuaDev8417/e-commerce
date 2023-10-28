@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-container-products{
+    width: 100%;
+    height: 110px;
+    background: linear-gradient(35deg, rgba(0,0,0,.1), rgba(0,0,0,.1));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    z-index: 1;
+    position: absolute;
+}
+
+.nav-container-products .logo{
+    width: 80px;
+}
+
+.nav-container-products .logo img{
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.products-content{
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url('https://scontent.fssa20-1.fna.fbcdn.net/v/t1.6435-9/186484483_138910438294942_3946128697690726956_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=810d5f&_nc_ohc=dxwZZ3Ec9rAAX_Du90Q&_nc_ht=scontent.fssa20-1.fna&oh=00_AfBYF-S48DB1GeGJj7RY-yn7-kwunR-63442DR4pcnIMgQ&oe=65635A00');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.products-content .content-box{
+    margin-left: 7%;
+}
+
+.products-content .content-box h2{
+    font-weight: 400;
+    font-size: 36px;
+    color: #ff4500;
+}
+
+.products-content .content-box label{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.products-content .content-box label span{
+    color: #fff;
+}
+
+.products-content .content-box a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    color: #000000;
+    letter-spacing: 3px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+    box-shadow: 4px 4px 10px #b7b6b6, -4px -4px 10px #fff;
+}
+
+.products-content .content-box a:hover{
+    box-shadow: -4px -4px 10px #b7b6b6, 4px 4px 10px #fff;
+}
+
+/* ESTILOS */
+
+.title{
+    margin: 5rem 0 2rem;
+}
+
+.title h2{
+    text-align: center;
+}
+
+.images-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(81, 79, 79);
+    padding: 50px 0;
+    border-radius: 10px;
+}
+
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    background: rgb(81, 79, 79);
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+.image-gallery{
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.image-gallery:hover{
+    transform: scale(1.05);
+}
+
+#darkbox{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    text-align: center;
+    z-index: 3;
+}
+
+.home-icon{
+    width: 80px;
+    padding: 20px;
+}
+
+.home-icon img{
+    border-radius: 50%;
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.close i{
+    color: #fff;
+}
+
+#prev-button{
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    cursor: pointer;
+}
+
+#next-button{
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    cursor: pointer;
+}
+
+.nav-button i{
+    color: #fff;
+    font-size: 2rem;
+}
+
+#darkbox-image{
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* MEDIA QUERIES */
+@media(max-width: 1300px){
+    .images-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 50px 20px;
+    }
+
+    .products-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 1000px){
+    .images-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 50px 20px;
+    }
+
+    .products-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 750px){
+    .images-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 30px;
+    }
+    
+    .products-container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 30px;
+    }
+}
+
+@media(max-width: 500px){
+    .products-content{
+        background-image: url('https://scontent.fssa20-1.fna.fbcdn.net/v/t1.6435-9/186484483_138910438294942_3946128697690726956_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=810d5f&_nc_ohc=dxwZZ3Ec9rAAX_Du90Q&_nc_ht=scontent.fssa20-1.fna&oh=00_AfBYF-S48DB1GeGJj7RY-yn7-kwunR-63442DR4pcnIMgQ&oe=65635A00');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .products-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .images-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-gallery{
+        width: 90%;
+        height: 90%;
+    }
+}
