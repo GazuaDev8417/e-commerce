@@ -29,7 +29,7 @@ cart !== '' ? cart.map(item=>{
         <div class='item-container'>
             <img src=${item.product} alt='Imagem do produto' class='cart-image'>
             <div class='product-price'>
-                <span>${item.price}</span>
+                <span>R$ ${item.price}</span>
                 <button onclick='removeItemFromCart(${JSON.stringify(item)})'>Remover</button>
             </div>
         </div>
