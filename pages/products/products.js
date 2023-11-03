@@ -19,7 +19,7 @@ const displayImage = (index)=>{
   const price = gallery[index].getAttribute('image-price')
   
   darkboxImage.setAttribute('src', imageUrl)
-  productPrice.innerHTML = price
+  productPrice.innerHTML = `R$ ${price}`
   currentImageIndex = index
 }
 
