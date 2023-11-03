@@ -1,6 +1,6 @@
 //HUMBURGER MENU
 const humburger = document.querySelector('#humburger')
-const moreBtn = document.querySelector('.popular-products-btn')
+//const moreBtn = document.querySelector('#moreBtn')
 
 
 humburger.onclick = ()=>{
@@ -10,6 +10,6 @@ humburger.onclick = ()=>{
     
 }
 
-moreBtn.onclick = ()=>{
+/* moreBtn.addEventListener('click', ()=>{
     location.href = 'pages/products/index.html#products'
-}
+}) */
