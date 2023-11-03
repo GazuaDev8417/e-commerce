@@ -33,6 +33,7 @@ cartIcon.onclick = ()=>{
   const imageUrl = gallery[currentImageIndex].getAttribute('data-image')
   const price = gallery[currentImageIndex].getAttribute('image-price')
   const cartObj = {
+    id: `${Date.now()}-${Math.random().toString(16)}`,
     product: imageUrl,
     price
   }
@@ -42,6 +43,11 @@ cartIcon.onclick = ()=>{
   if(existingItem === -1){
     cart.push(cartObj)
     localStorage.setItem('cart', JSON.stringify(cart))  
+  }else{
+    const decide = window.confirm('Você já adicionou esse produto. Verifique seu carrinho.')
+    if(decide){
+      location.href = '../cart/index.html'
+    }
   }
 }
 
