@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
 
 *{
     margin: 0;
@@ -12,6 +13,19 @@
 html{
     background: #fbf9f9;
     font-family: 'Poppins', sans-serif;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #444444;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #d8d800;
+    border-radius: 5rem;
 }
 
 img{
@@ -261,7 +275,7 @@ button:active{
 /* PRODUTOS POPULARES */
 
 .popular-products{
-    margin: 120px 0;
+    margin-top: 30vh;
     background: #fbf9f9;
 }
 
@@ -384,7 +398,7 @@ button:active{
 /* FOOTER */
 
 .footer{
-    padding: 50px 30px;
+    padding: 10px 30px;
     background: #241816;
     margin-top: 30px;
 }
@@ -489,6 +503,17 @@ button:active{
 
 .social-media-share a:hover a:nth-child(2){
     padding-left: 10px;
+}
+
+.footer-text{
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    font-size: 13pt;
+    padding-top: 4rem;
+}
+
+.footer-text p a{
+    color: #fff;
 }
 
 /* RESPONSIVIDADE */
