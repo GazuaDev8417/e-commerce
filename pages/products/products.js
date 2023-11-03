@@ -7,8 +7,9 @@ const prevButton = document.getElementById("prev-button")
 const nextButton = document.getElementById("next-button")
 const buyBtn = document.getElementById('buyBtn')
 const cartIcon = document.querySelector('#cart-icon')
+const storagedCart = localStorage.getItem('cart')
+const cart = storagedCart === '' || storagedCart === null || storagedCart === undefined || storagedCart === '[]' ? [] : JSON.parse(storagedCart)
 let currentImageIndex = 0;
-let cart = []
 
 
 

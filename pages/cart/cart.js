@@ -1,12 +1,12 @@
 const radioButtons = Array.from(document.querySelectorAll("input[type='radio']"))
 const result = document.getElementById('result')
 const buy = document.getElementById('buyBtn')
-const storagedCart = localStorage.getItem('cart')
 const cartItems = document.querySelector('#cartItems')
+const storagedCart = localStorage.getItem('cart')
 const cart = storagedCart === '' || storagedCart === null || storagedCart === undefined || storagedCart === '[]' ? '' : JSON.parse(storagedCart)
 
 
-console.log(cart)
+
 
 const removeItemFromCart = (item)=>{
     const decide = window.confirm('Tem certeza que deseja remover o produto do carrinho?')
@@ -42,7 +42,7 @@ const total = cart !== '' && cart.reduce((acc, product)=>{
     return accumulator 
 }, 0)
 
-result.innerHTML = `Total: R$ ${total ? total : '0.00'}`
+result.innerHTML = `Total: R$ ${total ? total.toFixed(2) : '0.00'}`
 
 let paymentMethod = ''
 
