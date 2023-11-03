@@ -274,6 +274,10 @@
         grid-template-columns: repeat(2, 1fr);
         padding: 50px 30px;
     }
+
+    #darkbox-image{
+        height: 60%;
+    }
 }
 
 @media(max-width: 450px){
@@ -298,5 +302,17 @@
     .image-gallery{
         width: 90%;
         height: 90%;
+    }
+
+    .home-icon .acquisition{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #darkbox-image{
+        margin-top: 10vh;
+        width: 45%;
+        height: 40%;
     }
 }
