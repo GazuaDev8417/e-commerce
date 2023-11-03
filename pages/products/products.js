@@ -5,6 +5,7 @@ const productPrice = document.getElementById('product-price')
 const closeButton = document.getElementById("close-button")
 const prevButton = document.getElementById("prev-button")
 const nextButton = document.getElementById("next-button")
+const buyBtn = document.getElementById('buyBtn')
 const cartIcon = document.querySelector('#cart-icon')
 let currentImageIndex = 0;
 let cart = []
@@ -28,6 +29,26 @@ gallery.forEach((image, index)=>{
     document.body.style.overflow = 'hidden'
   }) 
 })
+
+buyBtn.onclick = ()=>{
+  const imageUrl = gallery[currentImageIndex].getAttribute('data-image')
+  const price = gallery[currentImageIndex].getAttribute('image-price')
+  const cartObj = {
+    id: `${Date.now()}-${Math.random().toString(16)}`,
+    product: imageUrl,
+    price
+  }
+
+  const existingItem = cart.findIndex(item => item.product === imageUrl)
+
+  if(existingItem === -1){
+    cart.push(cartObj)
+    localStorage.setItem('cart', JSON.stringify(cart))
+    location.href = '../cart/index.html'  
+  }else{
+    location.href = '../cart/index.html'
+  }
+}
 
 cartIcon.onclick = ()=>{
   const imageUrl = gallery[currentImageIndex].getAttribute('data-image')

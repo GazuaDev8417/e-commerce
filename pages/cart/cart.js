@@ -3,10 +3,10 @@ const result = document.getElementById('result')
 const buy = document.getElementById('buyBtn')
 const storagedCart = localStorage.getItem('cart')
 const cartItems = document.querySelector('#cartItems')
-const cart = storagedCart === '' || storagedCart === null || storagedCart === undefined ? '' : JSON.parse(storagedCart)
+const cart = storagedCart === '' || storagedCart === null || storagedCart === undefined || storagedCart === '[]' ? '' : JSON.parse(storagedCart)
 
 
-
+console.log(cart)
 
 const removeItemFromCart = (item)=>{
     const decide = window.confirm('Tem certeza que deseja remover o produto do carrinho?')
@@ -19,10 +19,12 @@ const removeItemFromCart = (item)=>{
     if(cartIndex !== -1){
         cart.splice(cartIndex, 1)
     }
-    localStorage.setItem('cart', cart)
+
+    localStorage.setItem('cart', JSON.stringify(cart))
+    location.reload()
 }
 
-cart && cart.map(item=>{
+cart !== '' ? cart.map(item=>{
     cartItems.innerHTML +=`
         <div class='item-container'>
             <img src=${item.product} alt='Imagem do produto' class='cart-image'>
@@ -32,9 +34,9 @@ cart && cart.map(item=>{
             </div>
         </div>
     `
-})    
+}) : cartItems.innerHTML = '<p>Seu carrinho está vazio</p>'    
 
-const total = cart && cart.reduce((acc, product)=>{
+const total = cart !== '' && cart.reduce((acc, product)=>{
     let accumulator = acc + Number(product.price)
     
     return accumulator 
