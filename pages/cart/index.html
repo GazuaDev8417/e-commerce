@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/icon.svg" type="image/svg">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="cart.css">
+    <title>AbelhaKaah - Pagamentos</title>
+</head>
+<body>
+    <header>
+        <div class="payment-nav-container">
+            <div class="logo">
+                <a href="../../index.html">
+                    <img src="../../img/icon.png" alt="Logo">
+                </a>
+            </div>
+            <div id="humburger" class="fas fa-bars"></div>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../products/index.html">Produtos</a></li>
+                    <li><a href="../cart/index.html">Carrinho</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="payment-home">
+            <div class="money-container">
+                <div class="cart-container">
+                    <div class="title">Produtos do seu carrinho</div>
+                    <div class="cart-items" id="cartItems"></div>
+                </div>
+                <div class="payment-container">
+                    <div class="title">Opções de pagamento</div>
+                    <div class="box-container">
+                        <div class="payment-box">
+                            <label for="payPal">
+                                <img src="https://d2r9epyceweg5n.cloudfront.net/apps/2362-pt_BR-small-PP_logo_6_01.jpg" 
+                                    alt="PayPal Image"
+                                    class="image">
+                            </label>
+                            <input 
+                                type="radio"
+                                value='PayPal'
+                                name="payment"
+                                id="payPal">
+                        </div>
+                        <div class="payment-box">
+                            <label for="mPago">
+                                <img src="https://ps.w.org/woocommerce-mercadopago/assets/icon-256x256.png?rev=2653727" 
+                                    alt="Mercado Pago Image"
+                                    class="image">
+                            </label>
+                            <input
+                                value='Mercado Pago' 
+                                type="radio"
+                                name="payment"
+                                id="mPago">
+                        </div>
+                        <div class="payment-box">
+                            <label for="boleto">
+                                <img src="https://olhardigital.com.br/wp-content/uploads/2015/02/20150205184012.jpg" 
+                                    alt="Boleto Image"
+                                    class="image">
+                            </label>
+                            <input 
+                                value='Boleto'
+                                type="radio"
+                                name="payment"
+                                id="boleto">
+                        </div>
+                    </div>
+                    <div class="box-container">
+                        <div class="payment-box">
+                            <label for="visa">
+                                <img 
+                                    src="https://img.freepik.com/free-icon/visa_318-202971.jpg" 
+                                    alt="Imagem de cartões de crédito"
+                                    class="image">
+                            </label>
+                            <input 
+                                value='Visa'
+                                type="radio"
+                                name="payment" 
+                                id="visa">
+                        </div>                            
+                        <div class="payment-box">
+                            <label for="master">
+                                <img 
+                                    src="https://imageio.forbes.com/blogs-images/steveolenski/files/2016/07/Mastercard_new_logo-1200x865.jpg?height=512&width=711&fit=bounds" 
+                                    alt="Imagem de cartões de crédito"
+                                    class="image">
+                            </label>
+                            <input
+                                value='Master Card'
+                                type="radio" 
+                                name="payment" 
+                                id="master">
+                        </div>                            
+                        <div class="payment-box">
+                            <label for="hipercard">
+                                <img 
+                                    src="https://seeklogo.com/images/H/Hipercard_Novo-logo-05174E7224-seeklogo.com.png" 
+                                    alt="Imagem de cartões de crédito"
+                                    class="image">
+                            </label>
+                            <input 
+                                value='Hiper Card'
+                                type="radio" 
+                                name="payment" 
+                                id="hipercard">
+                        </div>                            
+                        <div class="payment-box">
+                            <label for="american">
+                                <img 
+                                    src="https://static.vecteezy.com/ti/vetor-gratis/t1/14414708-logotipo-da-american-express-em-fundo-transparente-gratis-vetor.jpg" 
+                                    alt="Imagem de cartões de crédito"
+                                    class="image">
+                            </label>
+                            <input
+                                value='American Express' 
+                                type="radio"
+                                name="payment"
+                                id="american"
+                                onChange={handleRadioButton}>
+                        </div>                            
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-box">
+            <div class="footer-i f2">
+                <h4>Contato</h4>
+                <label>
+                    <a href="mailto:Abelhakaah@gmail.com">
+                        Email: Abelhakaah@gmail.com
+                    </a>
+                </label><br>
+                <label>
+                    <a href="https://api.whatsapp.com/send?phone=557199627140" target="_blank">
+                        Telefone: +55 (71) 9962-7140
+                    </a>
+                </label>
+            </div>
+            <div class="footer-i f3">
+                <h4>Redes Sociais</h4>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/abelhakaah/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>                    
+                    <a href="https://www.facebook.com/abelhaakaah/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-i f4">
+                <h4>Compartilhe nossa página</h4>
+                <div class="social-media-share">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://e-commerce-website-7uq3.onrender.com/" 
+                        target="_blank">
+                        <i class="fa-brands fa-facebook"></i>&nbsp; No Facebook
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://e-commerce-website-7uq3.onrender.com/" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>&nbsp; No Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/shareArticle?url=https://e-commerce-website-7uq3.onrender.com/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>&nbsp; No Linkedin
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-text">
+            <p>
+                Copyright &copy; 2023 por 
+                <a href="https://portfolio-x22d.onrender.com/" target="_blank">
+                    Flamarion França
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+<script src="cart.js"></script>
+</html>

@@ -1,0 +1,106 @@
+.payment-nav-container{
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(35deg, rgba(0,0,0,.5), rgba(0,0,0,.5));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    z-index: 1;
+    position: absolute;
+}
+
+.payment-nav-container .logo{
+    width: 50px;
+}
+
+.payment-nav-container .logo img{
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.payment-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.image{
+    width: 150px;
+    height: 100px;
+}
+
+.money-container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+    width: 80%;
+    height: 80vh;
+    margin-top: 20vh;    
+}
+
+.title{
+    font-size: 1.3rem;   
+    margin-bottom: 5vh;
+}
+
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 60%;
+    overflow: auto;
+}
+
+.cart-items::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+.cart-items .item-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.item-container .product-price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-container .cart-image{
+    width: 80px;
+    height: 90px;
+    border-radius: 5px;
+}
+
+.item-container button{
+    padding: 3px 15px;
+    border-radius: 5px;
+    border: none;
+    background: red;
+    cursor: pointer;
+    color: #fff;
+    transition: .5s;
+}
+
+.payment-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-container .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.payment-container .payment-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

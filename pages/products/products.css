@@ -138,24 +138,67 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.9);
     text-align: center;
     z-index: 3;
 }
 
 .home-icon{
-    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     padding: 20px;
 }
 
 .home-icon img{
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.home-icon .price{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.home-icon i{
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.home-icon .acquisition{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.home-icon .acquisition .acquisition-btn{
+    padding: 5px 30px;
+    border-radius: 20px;
+    background: #D8BD1A;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.home-icon .acquisition .acquisition-btn:hover{
+    box-shadow: 0 0 10px #fff;
+}
+
+.home-icon .acquisition .acquisition-btn:active{
+    transform: scale(.9);
+}
+
+.home-icon i:active{
+    transform: scale(.9);
 }
 
 .close{
-    position: absolute;
-    top: 10px;
-    right: 20px;
     cursor: pointer;
     font-size: 1.5rem;
 }
@@ -184,7 +227,7 @@
 }
 
 #darkbox-image{
-    width: 60%;
+    width: 45%;
     height: 80%;
     margin: auto;
     border-radius: 10px;
