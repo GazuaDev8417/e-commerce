@@ -1,6 +1,6 @@
 //HUMBURGER MENU
 const humburger = document.querySelector('#humburger')
-//const moreBtn = document.querySelector('#moreBtn')
+
 
 
 humburger.onclick = ()=>{
@@ -9,7 +9,3 @@ humburger.onclick = ()=>{
     humburger.classList.toggle('fa-times')
     
 }
-
-/* moreBtn.addEventListener('click', ()=>{
-    location.href = 'pages/products/index.html#products'
-}) */
