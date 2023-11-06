@@ -141,6 +141,7 @@
 
     .cart-payment-container .cart-items{
         width: 50%;
+        height: 20vh;
         margin: auto;
     }
 
