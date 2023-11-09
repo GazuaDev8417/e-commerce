@@ -606,7 +606,7 @@ button:active{
     .nav-bar{
         height: 0;
         position: absolute;
-        top: 110px;
+        top: 92px;
         right: 0;
         left: 0;
         width: 100%;
@@ -616,7 +616,7 @@ button:active{
     }
 
     .nav-bar.active{
-        height: 250px;
+        height: 200px;
     }
 
     .nav-bar ul{
@@ -632,11 +632,9 @@ button:active{
     }
 
     .nav-bar ul li a{
-        margin-bottom: 12px;
+        margin-bottom: 12px ;
         background-color: rgba(255, 255, 255, .3);
     }
-
-    /* DESCONTOS */
     .discount-news-box .discount-news-content{
         font-size: 25px;
     }
@@ -666,7 +664,6 @@ button:active{
 }
 
 @media(max-width: 530px){
-    /* PRODUTOS POPULARES */
     .popular-products-items .popular-products-item{
         padding: 20px;
         margin: 90px 30px;
@@ -731,7 +728,6 @@ button:active{
         margin-top: 10px;
     }
 
-    /* PRODUTOS POPULARES */
     .popular-products-title h2{
         font-weight: 400;
     }
@@ -743,8 +739,6 @@ button:active{
     .popular-products .popular-products-title h2{
         font-size: 21px;
     }
-
-    /* DESCONTOS */
     .discount-news-box{
         display: flex;
         align-items: center;
