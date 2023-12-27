@@ -7,7 +7,6 @@ const cart = storagedCart === '' || storagedCart === null || storagedCart === un
 
 
 
-
 const removeItemFromCart = (item)=>{
     const decide = window.confirm('Tem certeza que deseja remover o produto do carrinho?')
 
@@ -49,19 +48,40 @@ let paymentMethod = ''
 radioButtons.map(radio=>{
     radio.addEventListener('click', ()=>{
         if(radio.checked){  
-            paymentMethod = radio.value
+            paymentMethod = radio.value            
         }
     })
 })
 
+
 buy.onclick = ()=>{
+    let paymentIndex = 1
+    
     if(cart !== ''){
         if(!paymentMethod){
             alert('Selecione um método de pagamento, por favor.')
         }else{
             alert(`Compra realizada pelo ${paymentMethod}`)
-            localStorage.clear()
-            location.reload()
+            
+            if(!document.cookie){
+                document.cookie = `payment${paymentIndex}=${paymentMethod} - R$ ${total.toFixed(2)}`
+                localStorage.clear()
+                location.reload()
+
+                return
+            }
+            
+            let arrayCookie = document.cookie.split(';')            
+            if(arrayCookie.length >= 1){
+                paymentIndex = arrayCookie.length
+                document.cookie = `payment${paymentIndex + 1}=${paymentMethod} - R$ ${total.toFixed(2)}`
+                paymentIndex++
+
+                localStorage.clear()
+                location.reload()
+
+                return
+            }
         }
     }else{
         const decide = window.confirm('Seu carrinho ainda está vázio. Escolha um produto.')

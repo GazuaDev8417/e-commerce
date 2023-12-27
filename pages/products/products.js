@@ -49,6 +49,9 @@ buyBtn.onclick = ()=>{
   }else{
     location.href = '../cart/index.html'
   }
+
+  /* STORE IN COOKIES */
+  document.cookie = `product${currentImageIndex}=${imageUrl} - R$ ${price}`
 }
 
 cartIcon.onclick = ()=>{
