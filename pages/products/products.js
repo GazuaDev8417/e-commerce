@@ -99,3 +99,26 @@ nextButton.addEventListener('click', ()=>{
     displayImage(currentImageIndex + 1)
   }
 })
+
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  document.querySelectorAll('img').forEach(img=>{
+    img.setAttribute('loading', 'lazy')
+  })
+
+  const videos = document.querySelectorAll("video.lazy-video")
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const video = entry.target
+        
+        if(video.dataset.src){
+          video.src = video.dataset.src
+          video.load()
+        }
+        observer.observe(video)
+      }
+    })
+  })
+  videos.forEach(video => observer.observe(video))
+})
