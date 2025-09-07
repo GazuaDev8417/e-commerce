@@ -41,7 +41,7 @@
     gap: 10px;
     width: 100%;
     height: 56%;
-    overflow: auto;
+    overflow: scroll;
 }
 
 .cart-items::-webkit-scrollbar{
@@ -76,26 +76,218 @@
     color: #fff;
     transition: .5s;
 }
-
+/* MÉTODOS DE PAGEMENTO */
 .payment-container{
     grid-area: payment-container;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
     padding: 0 30px;
 }
 
-.payment-container .box-container{
+.payment-container .paymentmethod-container{
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
 
-.payment-container .payment-box{
+.paymentmethod-container i{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s ease;    
+}
+
+.paymentmethod-container i:hover{
+    color: blue;
+}
+
+.payment-container i:active{
+    transform: scale(.9);
+}
+
+/* ================= PIX / QR Code ================= */
+.pix-container-style {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    max-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    z-index: 1000;
+}
+
+.qr-close{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.qrcode{
+    color: #fff;
+}
+
+.qrcode img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+.qrcode .copy-paste {
+    max-width: 100%;
+    word-break: break-all;
+    white-space: normal;
+    background: #f5f5f5;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0.5rem auto;
+    text-align: left;
+    overflow-x: auto;
+}
+
+.qrcode button {
+    margin: 15px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #0077ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.qrcode a{
+    color: #fffe;
+}
+
+.qrcode a:hover{
+    color: blue;
+}
+
+/* MODAL DO CARTÃO */
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow: auto;
+}
+
+.modal-content{
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    position: relative;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+.close{
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-content.active{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* FORMULÁRIO DO MODAL DO CARTÃO */
+.form{
     display: flex;
     flex-direction: column;
-    margin: 5px;
+    align-items: flex-start;
+    gap: 10px;
 }
 
+.form .container{
+    height: 40px;
+    border: 1px solid;
+    padding-left: 10px;
+}
+
+#form-checkout__cardNumber{
+    width: 70%;
+}
+
+#form-checkout__expirationDate{
+    width: 35%;
+}
+
+#form-checkout__securityCode{
+    width: 20%;
+}
+
+.form input{
+    height: 40px;
+    width: 90%;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form input::placeholder{
+    font-size: 17px;
+}
+
+.form input::-webkit-input-placeholder {
+  font-size: 17px;
+}
+
+.form input::-moz-placeholder {
+  font-size: 17px;
+}
+
+.form input:-ms-input-placeholder {
+  font-size: 17px;
+}
+
+.form select{
+    width: 70%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 17px;
+}
+
+.form button{
+    padding: 5px;
+    background-color: #00AEEF;
+    outline: none;
+    box-shadow: 0 0 8px black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    padding: 5px 20px;
+    font-weight: bold;
+    transition: .3s ease-in;
+    width: 70%;
+}
+
+.form button:active{
+    transform: scale(.9);
+}
+/*  */
 .payment-home .full-summary{
     grid-area: full-summary;
     display: flex;
