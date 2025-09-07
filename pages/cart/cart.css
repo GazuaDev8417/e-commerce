@@ -114,7 +114,8 @@
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, .8);
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
     padding: 1rem;
     box-sizing: border-box;
     text-align: center;
@@ -321,6 +322,22 @@
         ;
         grid-template-columns: .8fr  1fr;
         grid-template-rows: 50vh 15vh;
+    }
+}
+
+@media(max-width: 768px){
+    .modal-content{
+        max-width: 80%;
+    }
+
+    .form input,
+    .form select,
+    .form button{
+        width: 100%;
+    }
+
+    #form-checkout__cardNumber{
+        width: 95%;
     }
 }
 

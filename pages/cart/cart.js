@@ -194,7 +194,6 @@ document.getElementById('pix').addEventListener('click', async () => {
         return
     }
 
-    document.getElementById('pix-container').style.display = 'block'
     try {
         const res = await fetch(`${BASE_URL}/pay`, {
             method: 'POST',
@@ -215,6 +214,7 @@ document.getElementById('pix').addEventListener('click', async () => {
         }
 
         const data = await res.json()
+        document.getElementById('pix-container').style.display = 'block'
         qrCodeContainer.innerHTML = ''
         
         if (data.qr_code_base64) {
