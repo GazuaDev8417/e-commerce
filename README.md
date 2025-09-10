@@ -11,10 +11,7 @@ Abelhakaah é uma plataforma de e-commerce voltada para o público feminino, com
 - **Home**: página inicial destacando estilo, tendências e seções de produtos.
 - **Produtos**: catálogo com categorias como *Mais Votados* e *Produtos Populares*.
 - **Carrinho**: espaço onde o usuário adiciona itens antes de finalizar a compra.
-- **Serviços Disponíveis**:
-  - Atendimento ao cliente 24h
-  - Pagamentos seguros
-  - Garantia de devolução do dinheiro
+- **Simulação de pagemnto online**: serviço disponibilizado pelo Mercado Pago com geração de qrcode e formulário para cartão de crédito 
 
 ---
 <br>
