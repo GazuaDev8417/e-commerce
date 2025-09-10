@@ -1,5 +1,22 @@
-# E-commerce
+# Abelhakaah – E-commerce de Moda Feminina
 
-Website que simula loja online.
+Projeto que simula loja online de moda feminina.
 
->https://e-commerce-website-7uq3.onrender.com
+## Visão Geral
+
+Abelhakaah é uma plataforma de e-commerce voltada para o público feminino, com vitrines de produtos como roupas e acessórios.
+
+## Funcionalidades
+
+- **Home**: página inicial destacando estilo, tendências e seções de produtos.
+- **Produtos**: catálogo com categorias como *Mais Votados* e *Produtos Populares*.
+- **Carrinho**: espaço onde o usuário adiciona itens antes de finalizar a compra.
+- **Serviços Disponíveis**:
+  - Atendimento ao cliente 24h
+  - Pagamentos seguros
+  - Garantia de devolução do dinheiro
+
+---
+<br>
+
+>Link do projeto: https://e-commerce-website-7uq3.onrender.com/
